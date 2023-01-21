@@ -14,9 +14,11 @@ namespace versta24.Controllers
         }
         //
         // GET: /HelloWorld/Welcome/
-        public string Welcome(string name = "Texter", int ID = 1)
+        public IActionResult Welcome(string name = "Texter", int numTimes = 1)
         {
-            return HtmlEncoder.Default.Encode($"Hello {name}, ID: {ID}");
+            ViewData["Message"] = "Привет, " + name;
+            ViewData["NumTimes"] = numTimes;
+            return View();
         }
     }
 }
