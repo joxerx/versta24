@@ -361,3 +361,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/mssqllocaldb
+/versta24/.config/dotnet-tools.json
+/versta24.dacpac
