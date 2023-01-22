@@ -22,12 +22,16 @@
 
 # Инструкция по запуску
 - Установить [.NET 7](https://dotnet.microsoft.com/en-us/download/dotnet/7.0)
-- Установить последнюю версию [SQL Server Express LocalDB](https://learn.microsoft.com/ru-ru/sql/database-engine/configure-windows/sql-server-express-localdb?view=sql-server-ver16)
+- Установить последнюю версию [Visual Studio 2022](https://visualstudio.microsoft.com/ru/vs/) 
 - Загрузить и распаковать репозиторий
-- В распакованной папке `versta24-master` перейти в каталог `versta24`
-- Нажать ПКМ в свободной области и открыть командную строку, ввести `dotnet run`
+- Открыть проект
+- Создать пустую базу данных на сервере по умолчанию с именем `versta24_Database`
+- В консоль диспетчера пакетов ввести `update-database`
+- Запустить проект через комбинацию `Ctrl+F5`
 - После загрузки приложение будет доступно по адресу `https://localhost:7011/`
 
+Если не запускается, возможно стоит обновить сервер:
+- [SQL Server Express LocalDB](https://learn.microsoft.com/ru-ru/sql/database-engine/configure-windows/sql-server-express-localdb?view=sql-server-ver16)
 База данных находится в `\versta24\_DataBase`
 
 ![image_2023-01-23_00-11-22](https://user-images.githubusercontent.com/29130600/213940826-0bbe7e3f-4cf7-48ac-9435-25b174cc6424.png)
