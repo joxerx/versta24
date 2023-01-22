@@ -31,7 +31,7 @@ namespace versta24.Models
 
         [Required]
         [Range(0.1, 10000)]
-        [Display(Name = "Вес груза")]
+        [Display(Name = "Вес груза, кг")]
         public double Weight { get; set; }
 
         [Required]
