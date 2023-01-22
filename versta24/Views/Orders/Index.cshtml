@@ -1,0 +1,72 @@
+﻿@model IEnumerable<versta24.Models.Order>
+
+@{
+    ViewData["Title"] = "Список заказов";
+}
+
+<h1>Список заказов</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-default btn-outline-primary">Добавить новый</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DepartureCity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DepartureAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RecipentCity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RecipentAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Weight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CollectionDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr onmouseover="this.style.background='#e9ecef'" ; onmouseout="this.style.background='#ffffff'"
+            onclick="location.href = '@(Url.Action("Details", "Orders", new { Id = item.Id}))'" style="cursor:pointer;">
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepartureCity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepartureAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RecipentCity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RecipentAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Weight)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CollectionDate)
+            </td>
+            <td>
+                <!--<a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |--> 
+                <!--<a asp-action="Details" asp-route-id="@item.Id">Подробности</a> -->
+                <!--<a asp-action="Delete" asp-route-id="@item.Id">Delete</a> -->
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
