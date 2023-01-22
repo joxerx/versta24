@@ -28,6 +28,7 @@
 - Нажать ПКМ в свободной области и открыть командную строку, ввести `dotnet run`
 - После загрузки приложение будет доступно по адресу `https://localhost:7011/`
 
+База данных находится в `\versta24\_DataBase`
 
 ![image_2023-01-23_00-11-22](https://user-images.githubusercontent.com/29130600/213940826-0bbe7e3f-4cf7-48ac-9435-25b174cc6424.png)
 ![image_2023-01-23_00-12-34](https://user-images.githubusercontent.com/29130600/213940829-77888ff5-9326-4a63-af8c-e88b27848a36.png)
