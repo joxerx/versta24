@@ -30,7 +30,7 @@ namespace versta24.Models
         public string? RecipentAddress { get; set; }
 
         [Required]
-        [Range(0.1, 10000)]
+        
         [Display(Name = "Вес груза, кг")]
         public double Weight { get; set; }
 
