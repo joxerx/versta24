@@ -26,3 +26,9 @@
 - В распакованной папке `versta24-master` перейти в каталог `versta24`
 - Нажать ПКМ в свободной области и открыть командную строку, ввести `dotnet run`
 - После загрузки приложение будет доступно по адресу `https://localhost:7011/`
+
+
+![image_2023-01-23_00-11-22](https://user-images.githubusercontent.com/29130600/213940826-0bbe7e3f-4cf7-48ac-9435-25b174cc6424.png)
+![image_2023-01-23_00-12-34](https://user-images.githubusercontent.com/29130600/213940829-77888ff5-9326-4a63-af8c-e88b27848a36.png)
+![image_2023-01-23_00-11-09](https://user-images.githubusercontent.com/29130600/213940830-d7896b75-97f1-49e1-aefa-4a8d8b836a65.png)
+![image](https://user-images.githubusercontent.com/29130600/213940843-58109cb2-3cab-483d-af42-9979ee570bc0.png)
