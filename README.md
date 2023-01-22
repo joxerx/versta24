@@ -22,6 +22,7 @@
 
 # Инструкция по запуску
 - Установить [.NET 7](https://dotnet.microsoft.com/en-us/download/dotnet/7.0)
+- Установить последнюю версию [SQL Server Express LocalDB](https://learn.microsoft.com/ru-ru/sql/database-engine/configure-windows/sql-server-express-localdb?view=sql-server-ver16)
 - Загрузить и распаковать репозиторий
 - В распакованной папке `versta24-master` перейти в каталог `versta24`
 - Нажать ПКМ в свободной области и открыть командную строку, ввести `dotnet run`
