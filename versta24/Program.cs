@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using versta24.Data;
+using versta24.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<versta24Context>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("versta24Context") ?? throw new InvalidOperationException("Connection string 'versta24Context' not found.")));
@@ -9,6 +11,13 @@ builder.Services.AddDbContext<versta24Context>(options =>
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+
+    SeedData.Initialize(services);
+}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -27,6 +36,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}"); // ������ ������������� �����������, ��������
+    pattern: "{controller=Home}/{action=Index}/{id?}"); // 
 
 app.Run();
