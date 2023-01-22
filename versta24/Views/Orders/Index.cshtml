@@ -1,19 +1,19 @@
 ﻿@model IEnumerable<versta24.Models.Order>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Список заказов";
 }
 
-<h1>Index</h1>
+<h1>Список заказов</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Добавить новый</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.CreatedDate)
+                Номер заказа #
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.DepartureCity)
@@ -40,7 +40,7 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.CreatedDate)
+                @Html.DisplayFor(modelItem => item.Id)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.DepartureCity)
